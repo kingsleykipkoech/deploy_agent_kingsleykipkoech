@@ -18,12 +18,23 @@ name="attendance_tracker_$folder"
 if [ -d $name ];then
 	echo "exists"
 else
-mkdir -p "$name"
-mkdir -p "$name/Helpers"
-mkdir -p "$name/reports"
+	mkdir -p "$name"
+	mkdir -p "$name/Helpers"
+	mkdir -p "$name/reports"
 echo "Parent directory and files  created for the  workspaces"
-touch "$name/attendance_checker.py"
-touch "$name/Helpers/assets.csv"
-touch "$name/Helpers/config.json"
-touch "$name/reports/reports.log"
+	cp attendance_checker.py "$name/"
+	cp assets.csv             "$name/Helpers/"
+	cp config.json            "$name/Helpers/"
+	cp reports.log            "$name/reports/"
 fi
+
+read -p "Do you want to update the attendance thresholds? (y/n): " choice
+if [ "$choice" = "y" ]; then
+        read -p "Enter Warning threshold in %:  " warning
+        read -p "Enter Failure threshold %: " failure
+        sed -i "s/75/$warning/" "$name/Helpers/config.json"
+        sed -i "s/50/$failure/" "$name/Helpers/config.json"
+        echo "Threshold modified"
+fi
+
+echo "Deployment of $name successfully "
