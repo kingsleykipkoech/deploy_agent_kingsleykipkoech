@@ -51,5 +51,5 @@ if [ "$choice" = "y" ]; then
         echo "Threshold modified"
 fi
 
-echo "Deployment of $name successfully "
+echo "Creation of $name successfully "
 exit 0
