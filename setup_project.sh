@@ -14,7 +14,7 @@ trap interrupt SIGINT
 
 
 
-echo "Deploying  is  starting"
+echo "Loading......."
 sleep 0.5
 echo "checking  if  python3  is  installed...."
 sleep 1
