@@ -50,8 +50,6 @@ if [ "$choice" = "y" ]; then
         sed -i "s/75/$warning/" "$name/Helpers/config.json"
         sed -i "s/50/$failure/" "$name/Helpers/config.json"
         echo "Threshold modified"
-else 
-	exit 1
 fi
 
 echo "Creation of $name successfully "
