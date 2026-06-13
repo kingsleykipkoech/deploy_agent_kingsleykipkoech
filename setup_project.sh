@@ -1,22 +1,23 @@
 #!/bin/bash
-incomplete() {
+interrupt() {
 echo " interrupt detected "
 echo " cleanning  up  ... "
 	if [ -d $name ];then
-	tar cf "${name}_archive.tar.gz" "$name"
+	tar cf "${name}_archive" "$name"
 	rm -rf "$name"
 	echo "Incompleted structure  removed"
 	fi
 	exit 1
 }
-trap incomplete SIGINT
+trap interrupt SIGINT
 
 
 
 
 echo "Deploying  is  starting"
+sleep 0.5
 echo "checking  if  python3  is  installed...."
-
+sleep 1
 if python3 --version;then
 	echo "python3  is installed moving forward"
 else
@@ -24,11 +25,11 @@ else
 fi
 
 
-echo "Doing the  creation  of  the  workspace"
-read -p "Enter a  unique  folder  name: " folder
+echo "Creating the workspace"
+read -p "Enter the desired folder  name: " folder
 name="attendance_tracker_$folder"
 if [ -d $name ];then
-	echo "exists"
+	echo " "$name"exists"
 else
 	mkdir -p "$name"
 	mkdir -p "$name/Helpers"
@@ -49,6 +50,8 @@ if [ "$choice" = "y" ]; then
         sed -i "s/75/$warning/" "$name/Helpers/config.json"
         sed -i "s/50/$failure/" "$name/Helpers/config.json"
         echo "Threshold modified"
+else 
+	exit 1
 fi
 
 echo "Creation of $name successfully "
