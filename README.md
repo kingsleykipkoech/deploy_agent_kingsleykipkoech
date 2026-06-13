@@ -5,8 +5,7 @@ This repository contains `setup_project.sh`,  a shell script that automates the 
  gracefully.
 # Student Attendance Tracker: Automated Deployment Agent
 
-**[Watch the Video  Explaining My Project Here](YOUR_VIDEO_URL_HERE)**
-
+<a href="https://drive.google.com/file/d/1uGhg3DmO3FMe8sZr7de1WQ2V2qSzAtwK/view?usp=sharing" target="_blank"> <b>Watch the Video Explaining My Project Here</b></a>
 ---
 ---
 
