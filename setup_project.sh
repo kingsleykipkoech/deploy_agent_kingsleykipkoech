@@ -10,7 +10,7 @@ echo " cleanning  up  ... "
 	exit 1
 }
 trap interrupt SIGINT
-
+#THIS  IS  THE  INSTRUCTION  THE  PROGRAM  WILL FOLLOW, THATS  WHY  ITS  AT THE  TOP
 
 
 
