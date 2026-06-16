@@ -14,12 +14,11 @@ This repository contains `setup_project.sh`,  a shell script that automates the 
 1. Verifies if Python 3 is installed on your machine before running anything else.
 2. Builds the desired directory architecture (`attendance_tracker_{input}/`) 
  with the `Helpers/` and `reports/` subdirectories.
-3. Migrates The  source  codes (`attendance_checker.py`, `assets.csv`, etc.) 
-into their correct target destinations.
+3. Generates all source codes (`attendance_checker.py`, `assets.csv`, `config.json`, `reports.log`) 
+ directly inside the workspace using embedded heredocs — no external files needed.
 4. Prompts to modify the default attendance thresholds and modifies the `config.json`
   values  using `sed`.
-5. It Listens for a `Ctrl+C` interrupt. If the process is canceled while  in mid-executio
-n, it removes the half-built workspace and packages the current state into an  archive.
+5. It Listens for a `Ctrl+C` interrupt. If the process is canceled while  in mid-execution, it removes the half-built workspace and packages the current state into an  archive.
 
 ---
 
@@ -32,4 +31,4 @@ To run the script, first  make  sure you have executable permissions and run it 
 chmod 755 setup_project.sh
 
 ./setup_project.sh 
-` ` `
+```
