@@ -26,5 +26,6 @@ To run the script, first  make  sure you have executable permissions and run it 
 ```bash
 chmod 755 setup_project.sh
 
+```bash
 ./setup_project.sh 
 ```
