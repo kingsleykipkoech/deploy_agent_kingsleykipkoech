@@ -1,11 +1,7 @@
 # Student Attendance Tracker: Automated Deployment Agent
 
-This repository contains `setup_project.sh`,  a shell script that automates the creation of
- a desired workspace, configures settings via the command line, and handles system signals
- gracefully.
-# Student Attendance Tracker: Automated Deployment Agent
 
-<a href="https://drive.google.com/file/d/1uGhg3DmO3FMe8sZr7de1WQ2V2qSzAtwK/view?usp=sharing" target="_blank"> <b>Watch the Video Explaining My Project Here</b></a>
+<a href="https://docs.google.com/videos/d/1f1C6oclpGQwl_D-_RisYO4HduIAlCTkqFAzPog4LnOQ/edit?usp=sharing" target="_blank"> <b>Watch my Video  Here</b></a>
 ---
 ---
 
